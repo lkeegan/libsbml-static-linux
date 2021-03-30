@@ -180,7 +180,7 @@ cd muparser
 mkdir cmake-build
 cd cmake-build
 cmake -G "Unix Makefiles" -DCMAKE_OSX_DEPLOYMENT_TARGET="10.14" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS="-fpic -fvisibility=hidden" -DCMAKE_CXX_FLAGS="-fpic -fvisibility=hidden" -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" -DBUILD_TESTING=OFF -DENABLE_OPENMP=OFF -DENABLE_SAMPLES=OFF ..
-time make -j$NPROCS
+VERBOSE=1 time make -j$NPROCS
 #make test
 $SUDOCMD make install
 cd ../../
